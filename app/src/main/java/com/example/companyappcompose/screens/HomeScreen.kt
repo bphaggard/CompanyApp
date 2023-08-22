@@ -28,7 +28,6 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -45,8 +44,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.companyappcompose.HomeViewModel
 import com.example.companyappcompose.R
+import com.example.companyappcompose.ui.theme.BebasFont
 import com.example.companyappcompose.ui.theme.TBlue
-import com.example.companyappcompose.ui.theme.fontFamily
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -107,7 +106,7 @@ fun HomeScreen(){
                 title = {
                     Text(
                         text = "Clean Room",
-                        fontFamily = fontFamily)
+                        fontFamily = BebasFont)
                 },
                 colors = TopAppBarDefaults.smallTopAppBarColors(
                     containerColor = TBlue,
@@ -126,7 +125,7 @@ fun HomeScreen(){
             ) {
                 Text(
                     text = "TODAY'S DRINKING SERVICE",
-                    fontFamily = fontFamily,
+                    fontFamily = BebasFont,
                     fontSize = 34.sp
                 )
                 Button(
@@ -145,7 +144,7 @@ fun HomeScreen(){
                     Text(
                         text = viewModel.newText,
                         fontSize = 44.sp,
-                        fontFamily = fontFamily)
+                        fontFamily = BebasFont)
                 }
                 Image(
                     painter = painterResource(id = R.drawable.tescan_logo),
@@ -190,13 +189,6 @@ fun HomeScreen(){
             }
         }
     )
-}
-
-
-fun randomSelect(): String {
-    val persons = arrayOf("Adam", "Patrik", "Jan", "Jakub", "Jiří", "Roman", "Martin", "Ondřej")
-    val randomValue = persons.random()
-    return randomValue
 }
 
 @Preview
