@@ -28,10 +28,9 @@ import com.example.companyappcompose.ui.theme.BebasFont
 fun AboutCompany(){
     Column(modifier = Modifier
         .fillMaxSize()
-        .background(Color.White)
         .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally){
-        Spacer(modifier = Modifier.size(10.dp))
+        Spacer(modifier = Modifier.size(80.dp))
         Text(
             text = "TESCAN GROUP, a.s.",
             fontFamily = BebasFont,
@@ -51,7 +50,7 @@ fun AboutCompany(){
                         "The company has a 30-year history of developing innovative electron microscopy, micro-computed tomography, and related software solutions for customers in research and industry worldwide. For example, " +
                         "TESCAN’s TENSOR is the first 4D-scanning transmission electron microscope (4D-STEM) built from the ground up for a totally new level of performance and user experience.\n\n" +
                         "As a result, TESCAN has earned a leading position in micro- and nanotechnology. \n\n" +
-                        "TESCAN headquartered in Brno, Czech Republic, employs more than 750 people in 14 sites around the world.\n",
+                        "TESCAN headquartered in Brno, Czech Republic, employs more than 750 people in 14 sites around the world.",
                 modifier = Modifier.padding(10.dp))
         }
         Spacer(modifier = Modifier.size(15.dp))
@@ -100,13 +99,14 @@ fun AboutCompany(){
                 text = "More than 3000 SEM installations in more than 80 countries prove the highest technical solution of TESCAN products.\n\n" +
                         "TESCAN sales and service network covers countries all over the world. " +
                         "The team of sales representatives and well-trained service staff is capable to assure fast service and customer support as well as detailed product information.\n",
-                modifier = Modifier.padding(10.dp))
+                modifier = Modifier.padding(5.dp))
             Image(
                 painter = painterResource(id = R.drawable.tescan_world),
                 contentDescription = "World image",
                 modifier = Modifier
                     .fillMaxWidth()
             )
+            Spacer(modifier = Modifier.size(15.dp))
         }
         Spacer(modifier = Modifier.size(15.dp))
         Card (modifier = Modifier
@@ -152,9 +152,10 @@ fun AboutCompany(){
                 modifier = Modifier.padding(start = 10.dp))
             Text(
                 text = "+420 530 353 353\n" +
-                        "support@tescan.com\n",
+                        "support@tescan.com",
                 modifier = Modifier.padding(10.dp))
         }
+        Spacer(modifier = Modifier.size(80.dp))
     }
 }
 

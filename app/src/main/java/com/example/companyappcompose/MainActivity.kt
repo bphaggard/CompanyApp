@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CompanyAppComposeTheme {
                 // A surface container using the 'background' color from the theme
-                HomeScreen()
+                MainScreen()
             }
         }
     }
@@ -25,5 +25,5 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun MainPreview() {
-    HomeScreen()
+    MainScreen()
 }

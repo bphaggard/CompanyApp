@@ -14,10 +14,9 @@ import com.example.companyappcompose.ui.theme.TBlue
 @Composable
 fun Employees(){
     Box (modifier = Modifier
-        .fillMaxSize()
-        .background(TBlue),
+        .fillMaxSize(),
         contentAlignment = Alignment.Center) {
-        Text(text = "List of all persons", fontSize = 30.sp)
+        Text(text = "List of all employees", fontSize = 30.sp)
     }
 }
 
