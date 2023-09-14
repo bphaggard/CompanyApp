@@ -1,4 +1,4 @@
-package com.example.companyappcompose
+package com.example.companyappcompose.bottombar
 
 
 import androidx.compose.runtime.Composable

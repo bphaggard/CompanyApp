@@ -99,7 +99,7 @@ fun AboutCompany(){
                 text = "More than 3000 SEM installations in more than 80 countries prove the highest technical solution of TESCAN products.\n\n" +
                         "TESCAN sales and service network covers countries all over the world. " +
                         "The team of sales representatives and well-trained service staff is capable to assure fast service and customer support as well as detailed product information.\n",
-                modifier = Modifier.padding(5.dp))
+                modifier = Modifier.padding(10.dp))
             Image(
                 painter = painterResource(id = R.drawable.tescan_world),
                 contentDescription = "World image",
@@ -155,7 +155,7 @@ fun AboutCompany(){
                         "support@tescan.com",
                 modifier = Modifier.padding(10.dp))
         }
-        Spacer(modifier = Modifier.size(80.dp))
+        Spacer(modifier = Modifier.size(95.dp))
     }
 }
 

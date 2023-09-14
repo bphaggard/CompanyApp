@@ -1,0 +1,28 @@
+CREATE TABLE employeeEntity (
+    id INTEGER NOT NULL PRIMARY KEY,
+    fullName TEXT NOT NULL
+);
+
+getEmployeeById:
+SELECT *
+FROM employeeEntity
+WHERE id = :id;
+
+getAllEmployees:
+SELECT *
+FROM employeeEntity;
+
+insertEmployee:
+INSERT OR REPLACE
+INTO employeeEntity
+VALUES (?,?);
+
+deleteEmployeeById:
+DELETE FROM employeeEntity
+WHERE id = :id;
+
+insertRandomEmployee:
+SELECT fullName
+FROM employeeEntity
+ORDER BY RANDOM()
+LIMIT 1;

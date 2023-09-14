@@ -1,10 +1,7 @@
-package com.example.companyappcompose
+package com.example.companyappcompose.bottombar
 
 import androidx.compose.foundation.layout.RowScope
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.ContentAlpha
 import androidx.compose.material.Icon
-import androidx.compose.material.LocalContentColor
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavDestination

@@ -1,4 +1,4 @@
-package com.example.companyappcompose
+package com.example.companyappcompose.bottombar
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -10,7 +10,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.currentBackStackEntryAsState
 
 @Composable
 fun CustomBottomNavigation(navController: NavHostController){
