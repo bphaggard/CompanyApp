@@ -13,5 +13,5 @@ interface EmployeeDataSource {
 
     suspend fun insertEmployee(fullName: String, id: Long? = null)
 
-    suspend fun chooseRandomEmployee(randomFullName: String)
+    suspend fun chooseRandomEmployee(): String?
 }

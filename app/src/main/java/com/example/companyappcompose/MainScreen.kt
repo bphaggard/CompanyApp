@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
 import com.example.companyappcompose.bottombar.CustomBottomNavigation
 import com.example.companyappcompose.bottombar.NavigationGraph
@@ -18,7 +19,7 @@ import com.example.companyappcompose.ui.theme.TBlue
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainScreen(){
-
+    
     val navController = rememberNavController()
 
     Scaffold(

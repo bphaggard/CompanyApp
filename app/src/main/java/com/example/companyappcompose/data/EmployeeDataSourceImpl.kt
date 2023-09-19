@@ -1,5 +1,6 @@
 package com.example.companyappcompose.data
 
+import android.util.Log
 import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import com.`package`.companyappcompose.AppDatabase
@@ -35,9 +36,16 @@ class EmployeeDataSourceImpl(
         }
     }
 
-    override suspend fun chooseRandomEmployee(randomFullName: String) {
-        withContext(Dispatchers.IO) {
-            queries.insertRandomEmployee().executeAsOneOrNull()
+    override suspend fun chooseRandomEmployee(): String? {
+        return withContext(Dispatchers.IO) {
+            try {
+                val randomEmployee = queries.insertRandomEmployee().executeAsOneOrNull()
+                Log.d("ChooseRandomEmployee", "Selected employee: $randomEmployee")
+                randomEmployee
+            } catch (e: Exception) {
+                Log.e("ChooseRandomEmployee", "Error selecting random employee: ${e.message}")
+                null
+            }
         }
     }
 }

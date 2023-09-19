@@ -18,18 +18,20 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 import com.example.companyappcompose.EmployeeListViewModel
 import com.example.companyappcompose.R
+import com.example.companyappcompose.bottombar.BottomNavigationItem
 import com.example.companyappcompose.ui.theme.BebasFont
 import com.example.companyappcompose.ui.theme.TBlue
 import kotlinx.coroutines.launch
@@ -56,9 +58,10 @@ fun HomeScreen(
                 fontFamily = BebasFont,
                 fontSize = 34.sp
             )
-            Spacer(modifier = Modifier.size(20.dp))
+            Spacer(modifier = Modifier.size(30.dp))
             Button(
-                onClick = { coroutineScope.launch { viewModel.selectRandomEmployee() } },
+                onClick = { coroutineScope.launch {
+                    viewModel.selectRandomEmployee() } },
                 colors = ButtonDefaults.buttonColors(TBlue),
                 elevation = ButtonDefaults.buttonElevation(
                     defaultElevation = 4.dp,
@@ -71,15 +74,15 @@ fun HomeScreen(
                     text = "CHOOSE PERSON"
                 )
             }
-            Spacer(modifier = Modifier.size(10.dp))
+            Spacer(modifier = Modifier.size(50.dp))
             Box() {
                 Text(
-                    text = viewModel.randomFullName,
+                    text = viewModel.randomFullNameText,
                     fontSize = 44.sp,
                     fontFamily = BebasFont
                 )
             }
-            Spacer(modifier = Modifier.size(10.dp))
+            Spacer(modifier = Modifier.size(50.dp))
             Image(
                 painter = painterResource(id = R.drawable.tescan_logo),
                 contentDescription = "Company Logo",
@@ -88,7 +91,7 @@ fun HomeScreen(
                     .fillMaxHeight(0.15f)
                 //.size(80.dp)
             )
-            Spacer(modifier = Modifier.size(10.dp))
+            Spacer(modifier = Modifier.size(50.dp))
             Text(
                 text = "Pitný režim na pracovišti je zaměstnavatel povinen zajistit prostřednictvím " +
                         "neomezeného přístupu ke kohoutku s pitnou vodou. Nařizuje mu to zákoník práce, " +
@@ -98,12 +101,13 @@ fun HomeScreen(
                 fontSize = 14.sp,
                 modifier = Modifier.padding(15.dp)
             )
+            Spacer(modifier = Modifier.size(80.dp))
         }
     }
 }
 
-@Preview
-@Composable
-fun HomeScreenPreview(){
-    HomeScreen()
-}
+//@Preview
+//@Composable
+//fun HomeScreenPreview(){
+//    HomeScreen()
+//}

@@ -21,7 +21,7 @@ class EmployeeListViewModel @Inject constructor(
     var fullNameText by mutableStateOf("")
         private set
 
-    var randomFullName by mutableStateOf("")
+    var randomFullNameText by mutableStateOf("")
         private set
 
     fun newEmployeeAdded(){
@@ -43,8 +43,7 @@ class EmployeeListViewModel @Inject constructor(
     }
 
     suspend fun selectRandomEmployee() {
-            employeeDataSource.chooseRandomEmployee(randomFullName)
-            randomFullName = ""
-                Log.d("EmployeeListViewModel", "Random Full Name: $randomFullName")
-        }
+        randomFullNameText = employeeDataSource.chooseRandomEmployee() ?: ""
+        Log.d("EmployeeListViewModel", "Random Full Name: $randomFullNameText")
+    }
 }
